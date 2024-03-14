@@ -1,0 +1,6 @@
+body {
+    margin: 10px;
+    font-family: sans-sarif;
+    display: flex;
+    flex-direction: column;
+}
