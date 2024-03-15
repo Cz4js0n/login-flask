@@ -1,13 +1,11 @@
 from flask import Flask, redirect, request, url_for, render_template
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-import bcrypt
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///testowa.db'
 app.config['SECRET_KEY'] = 'ZAQ!2wsx'
 db = SQLAlchemy(app)
-salt = bcrypt.gensalt()
 
 
 class User(db.Model):
@@ -64,7 +62,8 @@ def login_user():
 
 @app.route('/login-success')
 def success():
-    return 'Zalogowano pomyślnie'
+    print('Zalogowano pomyślnie')
+    return redirect('/login')
 
 
 @app.route('/login-failed')
