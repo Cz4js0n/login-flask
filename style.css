@@ -11,7 +11,7 @@ body {
 
 form {
     max-width: 400px;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -65,4 +65,9 @@ input[type="password"] + label,
 input[type="email"] + label{
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
 }
