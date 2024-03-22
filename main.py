@@ -60,15 +60,20 @@ def login_user():
             return redirect('/login-success')
 
 
-@app.route('/login-success')
+@app.route('/login-success', methods=['POST', 'GET'])
 def success():
-    print('Zalogowano pomyślnie')
-    return redirect('/login')
+    if request.method == 'GET':
+        return render_template('login-success.html')
+    if request.method == 'POST':
+        return redirect('/login')
 
 
-@app.route('/login-failed')
+@app.route('/login-failed', methods=['POST', 'GET'])
 def fail():
-    return 'Nie zalogowano (błędne hasło bądź nie ma takiego użytkownika)'
+    if request.method == 'GET':
+        return render_template('login-failed.html')
+    if request.method == 'POST':
+        return redirect('/login')
 
 
 if __name__ == '__main__':
