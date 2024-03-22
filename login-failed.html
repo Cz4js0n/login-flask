@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Login fail</title>
+{% endblock %}
+
+{% block body %}
+<p>Nie zalogowano (błędne hasło bądź nie ma takiego użytkownika)</p>
+<form action="/login-success" method="post">
+    <input type="submit" value="Powrót do logowania">
+</form>
+{% endblock %}

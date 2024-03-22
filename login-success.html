@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Login success</title>
+{% endblock %}
+
+{% block body %}
+<p>Zalogowano pomyślnie</p>
+<form action="/login-success" method="post">
+    <input type="submit" value="Powrót do logowania">
+</form>
+{% endblock %}
